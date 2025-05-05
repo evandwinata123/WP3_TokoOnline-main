@@ -98,8 +98,8 @@ Route::get('/list-ongkir', function () {
     $response = Http::withHeaders([
         'key' => '794a5d197b9cb469ae958ed043ccf921'
     ])->get('https://api.rajaongkir.com/starter/province'); //ganti 'province' atau 'city'
-    dd($response->json());
-    //return response()->json($response->json());
+    //dd($response->json());
+    return response()->json($response->json());
 });
 
 Route::get('/cek-ongkir', function () {
